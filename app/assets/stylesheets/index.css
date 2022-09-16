@@ -2,8 +2,14 @@
   height: 100vh;
   width: 100vw;
 }
+.index-contents {
+  height: calc(100% - 8vh);
+  width: 100%;
+}
+
+/*ヘッダー*/
 .index-header {
-  height: 8vh;
+  height: 80px;
   width: 100%;
   box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px;
 }
@@ -23,4 +29,82 @@
 }
 .index-header-category-right {
   margin-left: 12px;
+}
+
+/*サイドバー*/
+.index-left {
+  height: 100%;
+  width: 80px;
+  position: relative;
+  box-shadow: 10px 0 0 #df8549;
+  overflow-x: hidden;
+  transition: all 0.5s;
+}
+.index-left:hover {
+  width: 280px;
+}
+.index-left ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.index-left ul li {
+  list-style: none;
+  display: block;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.index-left ul li:hover {
+  background-color: rgb(248, 248, 248);
+}
+.index-left ul li.active{
+  background-color: #df8549;
+}
+.index-left ul li.active::before{
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: -30px;
+  right: 0;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 #df8549;
+}
+.index-left ul li.active::after{
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 60px;
+  right: 0;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 #df8549;
+}
+.index-left ul li a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.index-left ul li a .icon {
+  display: block;
+  min-width: 45px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding-top: 4px;
+}
+.index-left ul li a .icon ion-icon {
+  font-size: 24px;
+}
+.index-left ul li a .title {
+  padding-left: 20px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
 }
