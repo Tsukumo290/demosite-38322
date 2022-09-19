@@ -26,9 +26,32 @@
 }
 .index-header-category {
   display: flex;
+  height: 100%;
+  align-items: center;
 }
-.index-header-category-right {
-  margin-left: 12px;
+.header-menu {
+  margin-left: 20px;
+}
+.submenu {
+  padding-top: 30px;
+  position: absolute;
+  display: none;
+}
+.menu li {
+  margin-bottom: 4px;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.header-menu {
+  cursor: pointer;
+}
+.left:hover .one {
+  display: block;
+}
+.right:hover .two {
+  display: block;
 }
 
 /*サイドバー*/
